@@ -34,10 +34,12 @@ with open('requirements.txt') as f:
         else:
             REQUIRES.append(line)
 
+with open('test-requirements.txt') as f:
+    TESTS_REQUIRES = f.readlines()
+
 setup(
     name='simpledeploy',
     version='0.1',
-    license='APACHE-2.0',
     packages=find_packages(),
     install_requires=REQUIRES,
     tests_require=TESTS_REQUIRES,
@@ -54,7 +56,7 @@ setup(
         'Bug Tracker': 'https://github.com/audiosventures/simpledeploy/issues',
         'Documentation': 'https://github.com/audiosventures/simpledeploy/wiki',
         'Source Code': 'https://github.com/audiosventures/simpledeploy',
-    }
+    },
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
