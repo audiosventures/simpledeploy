@@ -1,15 +1,24 @@
 language: python
 
 python:
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  - "3.6"
-  - "3.6-dev"  # 3.6 development branch
-  - "3.7-dev"  # 3.7 development branch
-
+  - '3.3'
+  - '3.4'
+  - '3.5'
+  - '3.6'
+  - 3.6-dev
+  - 3.7-dev
 install:
   - pip install -r requirements.txt
 
 script:
   - true
+
+deploy:
+  provider: pypi
+  user:
+    secure: fOvFCoflv6NDYmbUhtiTkF7a/CwyjCrb4cX8R+5r7EgyKLucbJ7xPG5ML5bLlefDiSpixmSNUYY57DXQkOaRhx5uv+OW3//wQRqvbzSmp/XiXvqoklEwavXWlydARB4rt2GHt9Zfc6pk2I8PuPRxIJxCMfcAm9FRnlIbCPxlIw5kDTx84wuJ8pXm/RXxwJ64rvCRfTLrhGpct/erAEWnR5fap48FcLXUuO6tlM9pIWJnQh0EzaRGRkYL6KoMPIjcC6QJY/hW+D2n5JS/yDA7VObbkKCKYI75fk35lqw/aWzIeYJMPg99pgmJL3ZQtmel7ukqX0TxXiH/pS43mSmv+M3Is1TJxDVxPOcIsGOewhLGQsEqlocDYr6kNbuEIRhFiwYmdsDwAQufBNGFuUV3eRq7EftSv9ll7wYLbkLiGZXnuZzCkJKp626rmHQvYEvUQLmSVNk3JsRcBfM/L0F98wZmKFTwnVAzMja9TNG/5o6+VHCbZppUM4oUwTF/mjxiz5ZnPb9MoLIG6VBM6Xhkt8tvSIQroWiFeFknpxE+Etl6ZloirUkuNIBIuZsklTS5hxw1XH82A7DC4PM3o4tiUk351fxSam2yK4ulW0rGQFtUr3LNKEQjcZ9wkv5fkGQQ3QVHaxJJ7vWM57JZdU9V0aPO5oB6jd0V2F0jDsLPjno=
+  password:
+    secure: H8Zli+I2cNN+OixMH7z3Xne+5RRTuRVZcHJN6XZtN4+uzhK/3l9JVU+d3SXaA68HeHXJo5g0UlG3OOkBAYrbEpEYcZ81HzD4T641r2e+Lkv4bU25t/Eqt/FeCX/bxzR7ZJJsGZYGgRIdspDBJ3NvDWcOsnMvkT+xhAElyPu+IVqJlk9Ah78YQyvmKN4/CAfGajGb3eroumhqxyejz/AU+I8xpToT0e3ADOTQ6gkRc+XH18ybjE1mobzK7mwU6RkO/jl846ETH/MGbmm7DSZNsDvouH2cnGOnXeMtbb+kvEaFPDMcWH3pd9TJoN/PyOlEqWi5xlrqSRO0J84qlh2GuqcF8rC7FQLtMutepyZ9ShvKfneRFun7iWFv0hJkur3HACcKs2kA/xVmEjhtKdwoxUnQFskx5H0nCMhRYWcVXENCP/BVp5gRzzoEe+QjxspxAz07F3dEu0ncfOrQvolbYrI/2qIIPn6uFne9rSN7Ck//V7qvk41occ6LscL0yJmOn2MdyQb+p0Zx0cX9inB0gjdWgYUKL9GvgFgvw0wNWpeD3sn7+9npcpv3i/mIwdQ8eCIdcnYQg4kgeoyJLRVvr+++uDK5nZ9uahYWy+MJtDnhHYbqoUh+32eyw6lOyHibRMngQrAX78ejR8TFJjAiLzJqIMaszxioT2smTaeh9Oo=
+  on:
+    tags: true
+    branch: master
