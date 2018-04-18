@@ -12,11 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include LICENSE.md
-include *.md
-include *.txt
-include *.ini
-exclude .gitignore
-exclude .github
-exclude .travis.yml
-global-exclude *.pyc
+.dockerignore
+.git
+.github
+.gitignore
+.travis.yml
+build
+dist
+simpledeploy.egg-info
+Dockerfile
